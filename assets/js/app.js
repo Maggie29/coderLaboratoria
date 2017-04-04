@@ -1,26 +1,24 @@
-var chile=document.getElementsByClassName("chile4");
-var lima5=document.getElementsByClassName("lima5");
-var lima6= document.getElementsByClassName("lim6");
+window.addEventListener("load",function(){
+var cuarta-chile= document.getElementsByClassName("chile4");
+var quinta-lima = document.getElementsByClassName("lima5");
+var sexta-lima = document.getElementsByClassName("lim6");
 var select = document.getElementById("select");
 
-select.onchange = function(){
-  if(selec.value=="cuarta-chile"){
-    for(i=0; i<chile.length; i++){
-      lima5[i].classList.remove("quinta-lima");
-      lima6[i].classList.remove("sexta-lima");
-    }
-  }
-  if(selec.value=="quinta-lima"){
-    for(i=0; i<lima5.length; i++){
-      chile[i].classList.remove("cuarta-chile");
-      lima6[i].classList.remove("sexta-lima");
-    }
-  }
-  if(selec.value=="sexta-lima"){
-    for(i=0; i<lima6.length; i++){
-      lima5[i].classList.remove("quinta-lima");
-      chile[i].classList.remove("cuarta-chile");
-    }
-  }
+select.onchange = function() {
+      if (select.value=="cuarta-chile"){
+           cuarta-chile.style.display = "block";
+           quinta-lima.style.display = "none";
+           sexta-lima.style.display = "none"
 
-}
+      }else if(select.value== "quinta-lima"){
+          quinta-lima.style.display = "block";
+          cuarta-chile.style.display = "none";
+          sexta-lima.style.display = "none";
+
+        }else if(select.value== "sexta-lima"){
+            sexta-lima.style.display = "block";
+            cuarta-chile.style.display = "none";
+            quinta-lima.style.display = "none";
+        }
+      }
+});
